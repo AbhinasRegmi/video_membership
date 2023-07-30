@@ -1,0 +1,25 @@
+[build-system]
+requires=["setuptools>=64.0.0", "wheel"]
+build-system="setuptools.build_meta"
+
+[project]
+name="membership"
+version="0.0.0"
+description="Video Membership with fastapi"
+authors=[
+    {name="Abhinas Regmi", email="contact@abhinasregmi.com.np"}
+]
+
+requires-python = ">=3.10.0"
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic[email]",
+    "pydantic-settings",
+    "python-dotenv",
+    "cassandra-driver",
+    "passlib[bcrypt]",
+    "python-multipart",
+    "python-jose[cryptography]",
+]

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to Home Page.</h1>
+
+    {% if request.state.is_authenticated %}
+    <h2>you are logged in.</h2>
+    {% else %}
+    <h2>you are not logged in.</h2>
+    {% endif %}
+
+
+    <script src="{{ url_for('static', path='/js/auth.js') }}"></script>
+    <script>
+        // let access_token = initAuth();
+    </script>
+{% endblock %}

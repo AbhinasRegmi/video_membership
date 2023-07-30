@@ -1,0 +1,18 @@
+annotated-types==0.5.0
+anyio==3.7.1
+certifi==2023.5.7
+dnspython==2.4.0
+email-validator==2.0.0.post2
+fastapi==0.100.0
+h11==0.14.0
+httpcore==0.17.3
+idna==3.4
+# Editable install with no version control (membership==0.0.0)
+-e /home/abhinas/Development/Python/video_membership
+pydantic==2.0.3
+pydantic-settings==2.0.2
+pydantic_core==2.3.0
+python-dotenv==1.0.0
+sniffio==1.3.0
+starlette==0.27.0
+typing_extensions==4.7.1

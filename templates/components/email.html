@@ -1,0 +1,18 @@
+{% if data %}
+    <input 
+    class="border rounded-md px-3 py-2 text-base" 
+    required 
+    type="email" 
+    name="email"
+    value='{{data.email}}'
+    placeholder="Enter your email."
+    >
+{% else %}
+    <input 
+    class="border rounded-md px-3 py-2 text-base" 
+    required 
+    type="email" 
+    name="email"
+    placeholder="Enter your email."
+    >
+{% endif %}
