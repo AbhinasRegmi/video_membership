@@ -17,8 +17,8 @@ from membership.exceptions.auth import NoAuthHeadersError
 from membership.exceptions.auth import NoAcessTokenCookieError
 from membership.exceptions.handler.auth import auth_header_exc_handler
 
+from membership.api.router import template_router
 from membership.middleware.auth import UserAuthMiddleware
-from membership.api.router import v1_router, template_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -58,5 +58,4 @@ async def checkup():
     }
 
 
-app.include_router(v1_router)
 app.include_router(template_router)
