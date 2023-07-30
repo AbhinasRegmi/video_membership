@@ -10,16 +10,21 @@ from membership.core.config import settings
 from membership.core.template import stemplate
 
 from membership.models.user import UserModel
-from membership.middleware.auth import UserAuthMiddleware
-from membership.exceptions.auth import NoAuthHeadersError, NoAcessTokenCookieError
+from membership.models.video import VideoModel
+
 from membership.exceptions.token import TokenInvalidError
-from membership.api.router import v1_router, template_router
+from membership.exceptions.auth import NoAuthHeadersError
+from membership.exceptions.auth import NoAcessTokenCookieError
 from membership.exceptions.handler.auth import auth_header_exc_handler
+
+from membership.middleware.auth import UserAuthMiddleware
+from membership.api.router import v1_router, template_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     get_cdb()
     sync_table(UserModel)
+    sync_table(VideoModel)
     yield
 
 

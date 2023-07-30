@@ -3,7 +3,6 @@ from typing import Optional
 from pydantic import EmailStr
 
 from cassandra.cqlengine import columns
-from cassandra.type_codes import UUIDType
 from cassandra.cqlengine.models import Model
 
 from membership.core.config import settings

@@ -30,7 +30,7 @@ class _Setting(BaseSettings):
 
     #jwt variables
     JWT_ALGORITHM: str = "HS256"
-    JWT_ACCESS_TOKEN_EXP: int = 1 # 30 minutes
+    JWT_ACCESS_TOKEN_EXP: int = 30 # 30 minutes
 
     # .env
     MEMBERSHIP_SECRET_KEY: str
